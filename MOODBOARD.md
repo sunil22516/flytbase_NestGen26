@@ -2,7 +2,16 @@
 **Built by Sunil**
 
 ---
+Enjoy viewing the website , hope it feels interactive enough
+Had 3 Generated film ,  Last one took a bit , nd credits too .
 
+cntrl + Shift + R  - if smthn not works - you  know it ;)
+
+Scroll slowly , Feel Heavily
+https://sunil22516.github.io/flytbase_NestGen26/
+
+https://github.com/sunil22516/flytbase_NestGen26
+---
 ## Overall Mood: "The Briefing Room"
 
 > Dark. Cinematic. Editorial. Like you've been handed a classified dossier about what Fortune 500 companies actually do with autonomous drones — and someone left the lights low on purpose.
