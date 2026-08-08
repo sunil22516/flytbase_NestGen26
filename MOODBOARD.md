@@ -7,7 +7,6 @@
 
 > Dark. Cinematic. Editorial. Like you've been handed a classified dossier about what Fortune 500 companies actually do with autonomous drones — and someone left the lights low on purpose.
 
-![Dark cinematic moodboard — aerial industrial, cyan UI, monospace, film grain](moodboard_dark_cinematic.jpg)
 
 ---
 
@@ -15,7 +14,7 @@
 
 > Command center meets editorial magazine. Stripe's developer precision meets Apple's scroll-driven cinema. The interface should feel like a Bloomberg terminal had a baby with a film title sequence.
 
-![UI reference board — dark dashboards, telemetry, editorial typography](moodboard_ui_references.jpg)
+
 
 ---
 
