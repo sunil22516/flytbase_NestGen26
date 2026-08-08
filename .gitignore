@@ -5,15 +5,10 @@ NestGen 26 Hackathon - Inspiration References/
 .claude/
 .gemini/
 
-# Original source videos (already copied to media/video/)
+# Original source videos (already converted/copied)
 astronaut_usingairobo_tofixignitionchamber_gotdistroyedbczignitionstarts.mov
 Man_activates_wearable_leg_device_202608081559.mp4
-
-# Moodboard generated images (in the markdown, not served by site)
-moodboard_dark_cinematic.jpg
-moodboard_ui_references.jpg
-moodboard_typography.jpg
-moodboard_assets/
+media/video/astronaut.mov
 
 # OS files
 Thumbs.db

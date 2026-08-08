@@ -7,7 +7,7 @@
 
 > Dark. Cinematic. Editorial. Like you've been handed a classified dossier about what Fortune 500 companies actually do with autonomous drones — and someone left the lights low on purpose.
 
-![Dark cinematic moodboard — aerial industrial, cyan UI, monospace, film grain](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_dark_cinematic_1786188983637.jpg)
+![Dark cinematic moodboard — aerial industrial, cyan UI, monospace, film grain](moodboard_dark_cinematic.jpg)
 
 ---
 
@@ -15,7 +15,7 @@
 
 > Command center meets editorial magazine. Stripe's developer precision meets Apple's scroll-driven cinema. The interface should feel like a Bloomberg terminal had a baby with a film title sequence.
 
-![UI reference board — dark dashboards, telemetry, editorial typography](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_ui_references_1786188996789.jpg)
+![UI reference board — dark dashboards, telemetry, editorial typography](moodboard_ui_references.jpg)
 
 ---
 
@@ -23,7 +23,7 @@
 
 > Two fonts. One rule: **Syne screams, JetBrains Mono whispers.**
 
-![Typography moodboard — bold uppercase, stroke outlines, monospace labels](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_typography_1786189008263.jpg)
+![Typography moodboard — bold uppercase, stroke outlines, monospace labels](moodboard_typography.jpg)
 
 | Font | Weight | Role | Example |
 |---|---|---|---|
@@ -74,17 +74,19 @@
 
 > Every drone image, every dashboard screenshot, every field deployment photo is **real FlytBase product imagery**. Nothing is a mockup.
 
-````carousel
-![The drone at rest — lit against a dark hangar floor](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/drone_hero.png)
-<!-- slide -->
-![The drone in flight — diagonal angle, rotors visible](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/drone_diagonal.png)
-<!-- slide -->
-![Fleet View — multiple drones tracked on a satellite map](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/fleet_view.png)
-<!-- slide -->
-![Software console — live telemetry, camera controls, alerts](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/console.png)
-<!-- slide -->
-![Oil & gas dashboard — tank corrosion flagged](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/oilgas_dash.png)
-````
+### Drone
+
+![The drone at rest](media/drone/hero.png)
+
+![The drone in flight](media/drone/diagonal.png)
+
+### Dashboards
+
+![Fleet View — multiple drones tracked on a satellite map](media/dash/03_fleet_view.png)
+
+![Software console — live telemetry, camera controls, alerts](media/dash/02_drone_software_console.png)
+
+![Oil and gas dashboard — tank corrosion flagged](media/dash/oilgas_dashboard.png)
 
 ---
 
@@ -92,11 +94,9 @@
 
 > These aren't studio shots. These are drone docks deployed in actual terrain — mountains, solar farms, alpine ridgelines. The visual language is: **functional, weathered, real.**
 
-````carousel
-![A drone dock installed on open mountain terrain](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/dock_mountain.png)
-<!-- slide -->
-![A drone dock on an alpine ridgeline at altitude](C:/Users/sunil/.gemini/antigravity/brain/65802b4a-777b-446d-b762-85bca1a84e24/moodboard_assets/alpine_dock.png)
-````
+![A drone dock installed on open mountain terrain](media/site/dock_mountain_terrain.png)
+
+![A drone dock on an alpine ridgeline at altitude](media/site/site_gallery_07.png)
 
 ---
 
@@ -128,8 +128,7 @@ The page has four invisible layers that create atmosphere without the user consc
 
 ## Anti-References — What This Is NOT
 
-> [!CAUTION]
-> These were deliberately avoided. If the page ever starts feeling like any of these, something has gone wrong.
+> ⚠️ These were deliberately avoided. If the page ever starts feeling like any of these, something has gone wrong.
 
 | ❌ Anti-Reference | Why it was rejected |
 |---|---|
