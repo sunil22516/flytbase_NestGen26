@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>NestGen '26 — Companies never talk about this in public</title>
+	<meta name="description"
+		content="NestGen '26 — online, September 29. One day a year, the playbooks behind Fortune-500-scale physical AI programs leave the boardroom. Shell, Airbus, UK Police, SQM, MPA Singapore, CSX.">
+	<meta name="theme-color" content="#050505">
+	<link rel="icon" href="media/flytbase-motif.png" type="image/png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css?v=4">
+</head>
+
+<body>
+
+	<a class="skip-link" href="#pattern">Skip to content</a>
+
+	<!-- ============ FIXED FX LAYERS (outside #luxy on purpose — see README) ============ -->
+
+	<!-- cursor spotlight -->
+	<div class="fx-spotlight" id="spotlight" aria-hidden="true"></div>
+	<!-- film grain + scanline -->
+	<div class="fx-grain" aria-hidden="true"></div>
+
+	<!-- scroll-locked video theatres -->
+	<div class="fx-theaters" id="theaters" aria-hidden="true">
+
+		<div class="theater" data-theater="thesis">
+			<video class="theater__video" data-src="media/video/hero-physical-ai.mp4" muted playsinline
+				preload="none"></video>
+			<div class="theater__vignette"></div>
+			<div class="theater__caption">
+				<span class="theater__kicker">/ the thesis</span>
+				<h3 class="theater__title">AI for the <span class="stroke">physical world</span></h3>
+				<p class="theater__sub">NestGen started in 2022 as a small conversation about drones that live in their own
+					charging garage. NestGen '26 is about any machine that can sense the world and act on it without a human
+					standing right there.</p>
+			</div>
+			<div class="theater__scrubbar"><i></i></div>
+		</div>
+
+		<div class="theater" data-theater="maritime">
+			<video class="theater__video" data-src="media/video/wearable.mp4" muted playsinline
+				preload="none"></video>
+			<div class="theater__vignette"></div>
+			<div class="theater__caption theater__caption--left">
+				<span class="theater__kicker">/ when the body fails · automation walks</span>
+				<h3 class="theater__title">broken leg<span class="stroke"> → mission complete</span></h3>
+				<p class="theater__sub">A pilot injured his leg mid-task. Instead of aborting, he strapped on an automated
+					exoskeleton and walked through it. Ekso Bionics builds exactly this — wearable robots that
+					let workers stay operational when their body says stop.</p>
+			</div>
+			<div class="theater__scrubbar"><i></i></div>
+		</div>
+
+		<div class="theater" data-theater="crossover" data-autoplay>
+			<video class="theater__video" data-src="media/video/astronaut.mov" muted playsinline loop
+				preload="none"></video>
+			<div class="theater__vignette"></div>
+			<div class="theater__caption">
+				<span class="theater__kicker">/ intermission</span>
+				<h3 class="theater__title">A gadget from <span class="stroke">the future</span></h3>
+				<p class="theater__sub">Doraemon reaches into the pocket and hands Spider-Man an autonomous drone. It goes
+					and inspects the case for him. The gag is the gadget — the unnerving part is that it already ships.</p>
+			</div>
+			<div class="theater__endmsg" id="crossoverEndMsg">
+				<p>that was scary no?</p>
+				<p class="theater__endmsg-sub">saved by our automation</p>
+			</div>
+			<div class="theater__scrubbar"><i></i></div>
+		</div>
+
+	</div>
+
+	<!-- the drone throughline -->
+	<div class="fx-drone" id="droneLayer" aria-hidden="true">
+		<div class="drone" id="drone">
+			<span class="drone__beam"></span>
+			<img class="drone__img" src="media/drone/diagonal.png" alt="">
+			<span class="drone__tag" id="droneTag">idle</span>
+		</div>
+	</div>
+
+	<!-- chapter rail -->
+	<nav class="hud" id="hud" aria-label="Section navigation">
+		<span class="hud__pct" id="hudPct">00</span>
+		<ul class="hud__list">
+			<li><a href="#pattern" data-hud="pattern"><i></i><span>The pattern</span></a></li>
+			<li><a href="#thesis" data-hud="thesis"><i></i><span>Physical AI</span></a></li>
+			<li><a href="#industries" data-hud="industries"><i></i><span>Six rooms</span></a></li>
+			<li><a href="#maritime" data-hud="maritime"><i></i><span>90 seconds</span></a></li>
+			<li><a href="#tool" data-hud="tool"><i></i><span>The tool</span></a></li>
+			<li><a href="#crossover" data-hud="crossover"><i></i><span>Intermission</span></a></li>
+			<li><a href="#rooms" data-hud="rooms"><i></i><span>Four more</span></a></li>
+			<li><a href="#stage" data-hud="stage"><i></i><span>On stage</span></a></li>
+		</ul>
+	</nav>
+
+	<!-- ============ SCROLLED CONTENT ============ -->
+	<div id="luxy" class="wrapp">
+
+		<!-- ---------- HEADER / THE HOOK ---------- -->
+		<header class="header" id="hook">
+			<div class="header__brand">
+				<img src="media/flytbase-motif.png" alt="FlytBase" class="header__logo">
+				<span class="header__brandtxt">FlytBase presents</span>
+			</div>
+
+			<span class="header__credit">built by Sunil</span>
+
+			<span class="header__kicker" data-magnet>NestGen '26 · online · sept 29</span>
+
+			<h1 class="title" data-splitting><span class="title_paralax">Companies never talk</span><span
+					class="stroke">about this in public</span></h1>
+
+			<p class="header__sub">Procurement headaches. Pilots that failed. The internal argument that finally got a
+				scaling decision approved. That conversation normally never leaves the four walls of the company.
+				<b>For one day a year, it does.</b>
+			</p>
+
+			<div class="header__img">
+				<img src="media/drone/hero.png" alt="An autonomous drone at rest, lit against a dark hangar floor">
+				<span class="header__imgtag">unit&nbsp;01 · standby</span>
+			</div>
+
+			<div class="header__marq">
+				<div class="header__marq-wrapp">
+					<span class="header__marq-txt">shell petroleum
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">airbus
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">uk police
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">sqm
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">mpa singapore
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">csx
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">first quantum minerals
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">texas instruments
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">port of amsterdam
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">italian railways
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">la metro
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">marathon petroleum
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">ypf argentina
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">belgian police
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">antea group
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">siyanda bakgatla
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+					<span class="header__marq-txt">uruguay ministry of interior
+						<span class="header__marq-star"><img src="img/star.svg" alt=""></span>
+					</span>
+				</div>
+			</div>
+
+			<span class="header__cue" aria-hidden="true"><i></i>scroll</span>
+		</header>
+
+		<main class="main">
+
+			<!-- ---------- ABOUT / THE PATTERN ---------- -->
+			<section class="about" id="pattern">
+				<div class="about__wrapp">
+					<div class="about__img" data-fly="-140,90,-6">
+						<img src="media/site/dock_mountain_terrain.png"
+							alt="A drone dock installed on open mountain terrain">
+						<span class="about__imgtag">drone-in-a-box · in the wild</span>
+					</div>
+					<div class="about__txt">
+						<h2 class="section-title">the pat<span class="stroke">tern</span>
+							<span class="section-title__square"></span>
+						</h2>
+						<p class="about__p" data-fly="90,40,2">A UK police force reaching an emergency before a patrol car
+							can. A lithium mine in the Chilean desert catching a leak in 90 minutes instead of a week. Those
+							are different stories with the same shape. Once you've seen how one industry did it, you start
+							seeing how yours could — and that is the entire reason everybody gets put on one stage.</p>
+
+						<div class="about__note" data-fly="90,70,2" data-tilt>
+							<span class="about__note-k">/ what FlytBase actually is</span>
+							<p>A drone that lives in its own weatherproof garage — on a rooftop, at a mine, next to a solar
+								farm. No pilot standing there with a remote. It wakes on a schedule, or the second an alarm
+								fires, flies its route, looks at what it needs to look at, comes home and charges itself.
+								FlytBase is the software behind the drone, the garage, and everything they see.</p>
+							<p class="about__note-def">You'll hear <button class="term" type="button" data-term
+									aria-describedby="def-bvlos">BVLOS<span class="term__def" id="def-bvlos"
+										role="tooltip">Beyond Visual Line of Sight — the drone is allowed to fly further than
+										the pilot can actually see it. That's what makes no-pilot-needed flights possible in
+										the first place.</span></button> a lot. That's all it means.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ---------- THEATRE A RUNWAY ---------- -->
+			<section class="runway" id="thesis" data-runway="thesis" aria-labelledby="thesis-h">
+				<h2 class="sr-only" id="thesis-h">AI for the physical world</h2>
+				<p class="sr-only">NestGen started in 2022 as a conversation about drones that live in their own charging
+					garage. NestGen '26 is about physical AI as a whole — any machine that can sense the world and act on it
+					without a human standing right there. This section plays a scroll-controlled film.</p>
+			</section>
+
+			<!-- ---------- SIX INDUSTRIES ---------- -->
+			<section class="benefits" id="industries">
+				<div class="content">
+					<h2 class="section-title">six ro<span class="stroke">oms</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="section-lede">Each one has a real speaker confirmed for September 29. Same insight, six
+						different buildings.</p>
+
+					<ul class="benefits__list">
+
+						<li class="benefits__item" data-fly="-180,80,-7" data-tilt>
+							<span class="benefits__num" data-speed="-200">/01</span>
+							<div class="benefits__icon"><img src="media/icon/publicsafety.png"
+									alt="Public safety icon: a police shield, a siren and a radio"></div>
+							<h3 class="benefits__h">Public Safety</h3>
+							<p class="benefits__was">A patrol car drives blind into an emergency.</p>
+							<p class="benefits__now">A drone is overhead first — sometimes in under two minutes — streaming
+								video before anyone has arrived.</p>
+							<div class="stat"><b class="stat__n" data-count="7" data-prefix="−" data-suffix=" min">−7
+									min</b><span class="stat__l">BF Kiel cut water-rescue response time by up to seven
+									minutes.</span></div>
+							<p class="benefits__x">During Hurricane Helene, a drone program in Asheville got eyes on flooded
+								areas before rescue teams could physically get there.</p>
+							<p class="benefits__stage"><i></i>UK Police — National Police Chiefs' Council, confirmed</p>
+						</li>
+
+						<li class="benefits__item" data-fly="0,150,4" data-tilt>
+							<span class="benefits__num" data-speed="-150">/02</span>
+							<div class="benefits__icon"><img src="media/icon/security.png"
+									alt="Security icon: a shield with a surveillance camera"></div>
+							<h3 class="benefits__h">Security</h3>
+							<p class="benefits__was">A guard walks the fence line at 2am.</p>
+							<p class="benefits__now">A drone does the rounds — and calls for backup before anything gets
+								stolen.</p>
+							<div class="stat"><b class="stat__n" data-count="60" data-prefix="−"
+									data-suffix="%">−60%</b><span class="stat__l">Titan Protection cut security costs by
+									60%.</span></div>
+							<p class="benefits__x">At Kansanshi Mining in Zambia, thermal night patrols cut break-in response
+								times by up to 50%.</p>
+							<p class="benefits__stage"><i></i>Airbus &amp; Texas Instruments, confirmed</p>
+						</li>
+
+						<li class="benefits__item" data-fly="180,80,7" data-tilt>
+							<span class="benefits__num" data-speed="-150">/03</span>
+							<div class="benefits__icon"><img src="media/icon/oil.png"
+									alt="Oil and gas icon: an offshore rig, a storage tank and pipework"></div>
+							<h3 class="benefits__h">Oil &amp; Gas</h3>
+							<p class="benefits__was">Someone climbs a storage tank once a year to check it.</p>
+							<p class="benefits__now">A drone checks it every single day.</p>
+							<div class="stat"><b class="stat__n" data-count="100" data-suffix="×">100×</b><span
+									class="stat__l">Sites fly on the order of a hundred times more often once a pilot isn't
+									required for every flight.</span></div>
+							<p class="benefits__x">Shell runs the world's first fully autonomous drone operation on a
+								<em>floating</em> offshore platform.
+							</p>
+							<p class="benefits__stage"><i></i>Shell Petroleum, confirmed</p>
+						</li>
+
+						<li class="benefits__item" data-fly="-180,-40,-5" data-tilt>
+							<span class="benefits__num" data-speed="-150">/04</span>
+							<div class="benefits__icon"><img src="media/icon/mining.png"
+									alt="Mining icon: an excavator and ore stockpiles"></div>
+							<h3 class="benefits__h">Mining</h3>
+							<p class="benefits__was">Walking a site for days to spot a leak or a stockpile change.</p>
+							<p class="benefits__now">Caught the same day, from the air.</p>
+							<div class="stat"><b class="stat__n" data-count="90" data-prefix="&lt;" data-suffix=" min">&lt;90
+									min</b><span class="stat__l">SQM cut detection time from days to under 90 minutes.</span>
+							</div>
+							<p class="benefits__x">Iodine yield went up 4×. The whole system paid for itself in under a year.
+							</p>
+							<p class="benefits__stage"><i></i>SQM &amp; First Quantum Minerals, confirmed</p>
+						</li>
+
+						<li class="benefits__item" data-fly="0,160,-4" data-tilt>
+							<span class="benefits__num" data-speed="-110">/05</span>
+							<div class="benefits__icon"><img src="media/icon/marine.png"
+									alt="Maritime icon: a container ship and port cranes"></div>
+							<h3 class="benefits__h">Maritime Ports</h3>
+							<p class="benefits__was">Fifteen minutes for a guard to walk over and check an alarm.</p>
+							<p class="benefits__now">A drone is there in under ninety seconds.</p>
+							<div class="stat"><b class="stat__n">400m → 5km</b><span class="stat__l">MPA Singapore stretched
+									its surveillance range.</span></div>
+							<p class="benefits__x">The alarm doesn't wait for a human to be free. Neither does the answer.</p>
+							<p class="benefits__stage"><i></i>Maritime &amp; Port Authority of Singapore, confirmed</p>
+						</li>
+
+						<li class="benefits__item" data-fly="180,-40,5" data-tilt>
+							<span class="benefits__num" data-speed="-200">/06</span>
+							<div class="benefits__icon"><img src="media/icon/railways.png"
+									alt="Railways icon: a train on track with signalling"></div>
+							<h3 class="benefits__h">Railways &amp; Transport</h3>
+							<p class="benefits__was">Shut the track down so an inspection crew can walk it.</p>
+							<p class="benefits__now">A drone reads the rail from 100 feet up, trains still running.</p>
+							<div class="stat"><b class="stat__n">credit-card wide</b><span class="stat__l">The size of defect
+									CSX catches from 100 ft, without shutting down the tracks.</span></div>
+							<p class="benefits__x">On the roads, a drone is airborne and streaming a crash scene back before
+								responders arrive.</p>
+							<p class="benefits__stage"><i></i>CSX &amp; Italian Railways, confirmed</p>
+						</li>
+
+					</ul>
+				</div>
+			</section>
+
+			<!-- ---------- THEATRE B RUNWAY ---------- -->
+			<section class="runway" id="maritime" data-runway="maritime" aria-labelledby="maritime-h">
+				<h2 class="sr-only" id="maritime-h">Fifteen minutes to under ninety seconds</h2>
+				<p class="sr-only">Maritime ports: MPA Singapore cut alarm response from fifteen minutes to under ninety
+					seconds and stretched surveillance range from 400 metres to 5 kilometres. This section plays a
+					scroll-controlled film.</p>
+			</section>
+
+			<!-- ---------- THE ACTUAL TOOL ---------- -->
+			<section class="work" id="tool">
+				<div class="content">
+					<h2 class="section-title">the actual t<span class="stroke">ool</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="section-lede">Not a mockup. These are the screens the people on stage are running.</p>
+				</div>
+
+				<div class="work__wrapp">
+					<div class="work__item" data-speed="-300" data-tilt>
+						<span class="work__item-num" data-speed="-1000">/001</span>
+						<div class="work__item-img">
+							<img src="media/dash/03_fleet_view.png"
+								alt="FlytBase Fleet View: three drones tracked live on a satellite map with alarm locations">
+						</div>
+						<span class="work__cap">Fleet View — several drones, one map, alarm locations pinned live.</span>
+					</div>
+					<div class="work__item" data-speed="-600" data-tilt>
+						<span class="work__item-num" data-speed="-500">/002</span>
+						<div class="work__item-img">
+							<img src="media/dash/02_drone_software_console.png"
+								alt="FlytBase console showing live telemetry, camera controls and alerts">
+						</div>
+						<span class="work__cap">The console — live telemetry, camera controls, alerts.</span>
+					</div>
+					<div class="work__item" data-speed="-700" data-tilt>
+						<span class="work__item-num" data-speed="-700">/003</span>
+						<div class="work__item-img">
+							<img src="media/dash/oilgas_dashboard.png"
+								alt="Oil and gas dashboard flagging tank corrosion with a one-click work order">
+						</div>
+						<span class="work__cap">Tank inspection — corrosion flagged, work order raised in one click.</span>
+					</div>
+					<div class="work__item" data-speed="-400" data-tilt>
+						<span class="work__item-num" data-speed="-200">/004</span>
+						<div class="work__item-img">
+							<img src="media/dash/railyard_corrosion_dashboard.png"
+								alt="Rail yard dashboard highlighting corrosion detected from the air">
+						</div>
+						<span class="work__cap">Rail yard — corrosion caught from the air, track still open.</span>
+					</div>
+				</div>
+
+				<div class="strip" id="strip">
+					<div class="strip__track">
+						<figure><img src="media/dash/01_platform_dashboard_overview.png" alt="Platform dashboard overview">
+						</figure>
+						<figure><img src="media/dash/verkos_security_dashboard.png" alt="Security operations dashboard">
+						</figure>
+						<figure><img src="media/dash/datacenters_dashboard.png"
+							alt="Data centre thermal imaging with live temperature readings"></figure>
+						<figure><img src="media/dash/05_supported_hardware.png"
+							alt="Supported hardware: drones, docks, cameras and sensors"></figure>
+						<figure><img src="media/site/site_gallery_07.png" alt="A drone dock installed on an alpine ridgeline">
+						</figure>
+						<figure><img src="media/dash/generic_platform_feed.png" alt="Live mission feed"></figure>
+						<figure><img src="media/site/site_gallery_10.png" alt="A drone flying past power lines"></figure>
+						<figure><img src="media/dash/site_gallery_09.png" alt="A drone dock on site"></figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- ---------- THEATRE C RUNWAY ---------- -->
+			<section class="runway runway--crossover" id="crossover" data-runway="crossover"
+				aria-labelledby="crossover-h">
+				<h2 class="sr-only" id="crossover-h">A gadget from the future</h2>
+				<p class="sr-only">An intermission: Doraemon hands Spider-Man an autonomous drone, which inspects the case
+					on his behalf. This section plays a scroll-controlled film.</p>
+			</section>
+
+			<!-- ---------- FOUR MORE ROOMS ---------- -->
+			<section class="rooms" id="rooms">
+				<div class="content">
+					<h2 class="section-title">four more r<span class="stroke">ooms</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="section-lede">Same pattern, different buildings — no film for these, just the receipts.</p>
+
+					<div class="rooms__grid">
+						<article class="room" data-fly="-160,60,-5" data-tilt>
+							<div class="room__img"><img src="media/dash/construction_dashboard.png"
+									alt="Construction dashboard with a live site view and flight scheduler"></div>
+							<h3>Construction</h3>
+							<p>Instead of waiting weeks for a progress report, a drone flies the site daily and flags what
+								changed. <b>Ibn Firnas</b>, a government project in Oman, went from a two-hour reporting cycle
+								to fifteen minutes — with nobody physically on site.</p>
+						</article>
+						<article class="room" data-fly="0,140,3" data-tilt>
+							<div class="room__img"><img src="media/dash/electricutilities_dashboard.png"
+									alt="Electric utilities dashboard monitoring several power sites remotely"></div>
+							<h3>Electric Utilities</h3>
+							<p>Instead of a crew driving the line once a year, the grid gets checked on a schedule — and
+								wildfire risk is flagged as it happens, not after.</p>
+						</article>
+						<article class="room" data-fly="0,140,-3" data-tilt>
+							<div class="room__img"><img src="media/site/site_gallery_05.png"
+									alt="A drone dock overlooking a large solar farm in mountain terrain"></div>
+							<h3>Solar</h3>
+							<p>A failing panel gets caught weeks before it becomes a real problem. <b>EnBW</b> in Germany
+								scaled inspections from 150 megawatts to a full gigawatt using two drone docks and no extra
+								staff.</p>
+						</article>
+						<article class="room" data-fly="160,60,5" data-tilt>
+							<div class="room__img"><img src="media/dash/datacenters_dashboard.png"
+									alt="Data centre dashboard with thermal imaging and live temperature readings"></div>
+							<h3>Data Centers</h3>
+							<p>Instead of waiting for cooling to fail, thermal picks up the heat signature of the problem
+								weeks in advance — before it ever turns into downtime.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- ---------- WHO'S ON STAGE ---------- -->
+			<section class="serv" id="stage">
+				<div class="content">
+					<h2 class="section-title">who's on st<span class="stroke">age</span>
+						<span class="section-title__square"></span>
+					</h2>
+					<p class="section-lede">Confirmed for NestGen '26, grouped by track.</p>
+
+					<div class="serv__list">
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="500"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Public Safety</span>
+								<span class="serv__item-orgs">UK Police (NPCC) · Belgian Police (Politie Westkust) ·
+									Uruguay's Ministry of Interior · LA Metro</span>
+							</div>
+						</div>
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="400"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Security</span>
+								<span class="serv__item-orgs">Airbus · Texas Instruments · Antea Group</span>
+							</div>
+						</div>
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="800"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Maritime Ports</span>
+								<span class="serv__item-orgs">Maritime &amp; Port Authority of Singapore · Port of
+									Amsterdam</span>
+							</div>
+						</div>
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="600"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Railways &amp; Transport</span>
+								<span class="serv__item-orgs">LA Metro · Italian Railways · CSX</span>
+							</div>
+						</div>
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="450"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Oil &amp; Gas</span>
+								<span class="serv__item-orgs">Shell Petroleum · Marathon Petroleum · YPF Argentina</span>
+							</div>
+						</div>
+						<div class="serv__item" data-tilt>
+							<span class="serv__item-arrow" data-speed="700"><img src="img/arrow.svg" alt=""></span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Mining</span>
+								<span class="serv__item-orgs">First Quantum Minerals (Kansanshi &amp; Trident) · SQM ·
+									Siyanda Bakgatla Platinum Mine</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="agenda" data-fly="0,90,0">
+						<span class="agenda__k">/ what they actually walk through</span>
+						<ul>
+							<li>How they built the business case and proved ROI well enough to get executive sign-off.</li>
+							<li>How they went from one pilot project to running across multiple sites — and what broke along
+								the way.</li>
+							<li>How they navigated procurement, BVLOS approval, and getting different hardware to actually
+								work together.</li>
+							<li>How they made the operation genuinely AI-native, not just automated.</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- ---------- FOOTER ---------- -->
+		<footer class="footer" id="cta">
+			<span class="footer__k">one stage · one day</span>
+			<div class="footer__div" aria-label="NestGen '26">
+				<span data-speed="-300" aria-hidden="true">N</span>
+				<span data-speed="100" aria-hidden="true">E</span>
+				<span data-speed="-300" aria-hidden="true">S</span>
+				<span data-speed="350" aria-hidden="true">T</span>
+				<span data-speed="300" aria-hidden="true">G</span>
+				<span data-speed="200" aria-hidden="true">E</span>
+				<span data-speed="-310" aria-hidden="true">N</span>
+				<span data-speed="200" aria-hidden="true">'</span>
+				<span data-speed="-340" aria-hidden="true">2</span>
+				<span data-speed="-100" aria-hidden="true">6</span>
+			</div>
+			<div class="footer__div footer__div--sm" aria-label="September 29, online">
+				<span data-speed="220" aria-hidden="true">S</span>
+				<span data-speed="-180" aria-hidden="true">E</span>
+				<span data-speed="260" aria-hidden="true">P</span>
+				<span data-speed="-140" aria-hidden="true">T</span>
+				<span data-speed="180" aria-hidden="true">&nbsp;</span>
+				<span data-speed="-260" aria-hidden="true">2</span>
+				<span data-speed="150" aria-hidden="true">9</span>
+			</div>
+			<p class="footer__p">The playbooks that normally never leave the boardroom — for one day, in public.</p>
+			<div class="footer__meta">
+				<img src="media/flytbase-motif.png" alt="FlytBase" class="footer__logo">
+				<span>NestGen '26 · an event by FlytBase · online</span>
+				<span class="footer__credit">built by Sunil</span>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/splitting.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="js/luxy.js"></script>
+	<script src="js/js.js?v=4"></script>
+</body>
+
+</html>
