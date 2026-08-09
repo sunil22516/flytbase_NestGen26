@@ -5,10 +5,6 @@ Static, no backend, no build step. Open `index.html` (or serve the folder) and i
 ```bash
 python -m http.server 4321
 ```
-
-Built on top of the supplied `Parallax-website-main` template — the Luxy.js + GSAP +
-ScrollTrigger + Splitting engine is intact and extended, not replaced.
-
 ---
 
 ## Research step — what I picked, and why
@@ -123,7 +119,7 @@ can't pin, without touching luxy.js.
 
 ## Content provenance
 
-Every stat, company and claim traces to `NestGen26_Context.md`. Nothing was invented.
+Every stat, company and claim traces to `NestGen26_Context.md`. Nothing was invented. but generated tho
 
 The four "idea" concepts from the brief (ocean drones, Bedrock Robotics retrofits,
 Wandercraft exoskeletons, autonomous greenhouses) were **cut** — they aren't in the context
