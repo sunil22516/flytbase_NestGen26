@@ -1,6 +1,6 @@
 # NestGen '26 — scrollytelling landing page
 
-Static, no backend, no build step. Open `index.html` (or serve the folder) and it runs.
+ Open `index.html` (or serve the folder) and it runs.
 
 ```bash
 python -m http.server 4321
